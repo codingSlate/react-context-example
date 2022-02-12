@@ -1,5 +1,4 @@
-import React from 'react';
-import { useContext } from 'react';
+import React,{ useContext } from 'react';
 import AppContext  from './context/AppContext';
 const Products = () => {
   const { message } = useContext(AppContext);
