@@ -1,7 +1,12 @@
 import React from 'react'
+import { Routes, Route, Link } from 'react-router-dom';
+import UserProfile from './UserProfile';
+
 const ProtectedRoute = () =>{
     return(
-    <div></div>
+    <Routes>
+      <Route path="/profile" elemene={<UserProfile/>}/>
+    </Routes>
     )
 }
 export default ProtectedRoute
