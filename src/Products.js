@@ -1,7 +1,13 @@
-import React from 'react'
-const Products = () =>{
-    return(
-    <div>I am products</div>
-    )
-}
-export default Products
+import React from 'react';
+import { useContext } from 'react';
+import AppContext  from './context/AppContext';
+const Products = () => {
+  const { message } = useContext(AppContext);
+  return (
+    <>
+      <div>I am products</div>
+      <p>{message}</p>
+    </>
+  );
+};
+export default Products;
