@@ -22,9 +22,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/products" element={<Products />} />
-            <ProtectedRoute element={<Navigate to="/login"/>}>
-              <Route path="/profile" element={<ProtectedRoute />} />
-            </ProtectedRoute>
+            <Route element={<ProtectedRoute/>}>
+              <Route path="/profile" element={<UserProfile />} />
+            </Route>
+
           </Routes>
         </AppState>
       </BrowserRouter>

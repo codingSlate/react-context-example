@@ -6,7 +6,8 @@ const Login = () => {
 
   return (
     <div>
-      {isAuth === 'true' ? (
+      I am login page
+      {/* {isAuth === 'true' ? (
         <p style={{ color: 'green' }}>You are valide user</p>
       ) : (
         <p>Try to login again</p>
@@ -19,7 +20,7 @@ const Login = () => {
           <option value="true">Valid Access</option>
           <option value="false">Valid Denied</option>
         </select>
-      </label>
+      </label> */}
     </div>
   );
 };

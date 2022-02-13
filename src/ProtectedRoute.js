@@ -1,12 +1,14 @@
 import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom';
-import UserProfile from './UserProfile';
+import { Outlet } from 'react-router-dom';
+import Login from './Login';
+
+const useAuth = () => {
+  const user = {loggedIn: false}
+  return user && user.loggedIn
+}
 
 const ProtectedRoute = () =>{
-    return(
-    <Routes>
-      <Route path="/profile" elemene={<UserProfile/>}/>
-    </Routes>
-    )
+  const isAuth = useAuth()
+    return isAuth ? <Outlet/> : <Login/>
 }
 export default ProtectedRoute
