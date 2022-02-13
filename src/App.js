@@ -8,10 +8,9 @@ import UserProfile from './UserProfile';
 import ProtectedRoute from './ProtectedRoute';
 
 import AppState from './context/AppState';
-import AppContext from './context/AppContext';
+
 
 export default function App() {
-  // const { isAuth } = useContext(AppContext);
   return (
     <div>
       <BrowserRouter>
@@ -24,9 +23,10 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/products" element={<Products />} />
-            <Route element={<ProtectedRoute />}>
+            <Route element={<ProtectedRoute/>}>
               <Route path="/profile" element={<UserProfile />} />
             </Route>
+
           </Routes>
         </AppState>
       </BrowserRouter>
